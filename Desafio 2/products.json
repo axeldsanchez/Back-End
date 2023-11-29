@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "title": "Xiaomi",
+        "description": "S22",
+        "code": 2200,
+        "stock": 5,
+        "thumnail": "./S22.jpg",
+        "price": 150000
+    },
+    {
+        "id": 2,
+        "title": "Celular",
+        "description": "S23",
+        "code": 2300,
+        "stock": 8,
+        "thumnail": "./S23.jpg",
+        "price": 180000
+    }
+]
