@@ -5,6 +5,7 @@ const productManager = new ProductManager("./products.json");
 
 const PORT = 8080;
 const app = express();
+app.use(express.urlencoded({extended: true}));
 
 app.get("/products", async (req, res) => {
     const {limit} = req.query;
@@ -14,13 +15,14 @@ app.get("/products", async (req, res) => {
     }
     const limitProducts = products.slice(0, limit);
     res.send(limitProducts);
-});
+}); 
 
-app.get("/products/:pid", async (req, res) => {
-    const {pid} = req.params;
-    const products = await productManager.getProductById(parseInt(pid));
+app.get("/products/:id", async (req, res) => {
+    const {id} = req.params;
+    const products = await productManager.getProductsById(parseInt(id));
     res.send(products);
 });
+
 
 app.listen(PORT, () => {
     console.log(`Servidor funcionando en puerto ${PORT}`);

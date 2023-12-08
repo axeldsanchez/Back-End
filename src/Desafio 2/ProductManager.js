@@ -75,9 +75,9 @@ class ProductManager {
     }
 };
 
-export default ProductManager
+export default ProductManager;
 
-const test = async () => {
+/* const test = async () => {
     const productManager = new ProductManager('./products.json');
     await productManager.addProduct({
         title: "Celular",
@@ -109,16 +109,16 @@ const test = async () => {
 
     });
 
-/*     const product2 = await productManager.getProductsById(2);
+    const product2 = await productManager.getProductsById(2);
     console.log(product2);
 
     await productManager.updateProduct(1, {
         title: "Xiaomi"
     });
 
-    await productManager.deleteProduct(3); */
+    await productManager.deleteProduct(3);
 
 }
 
 
-test ();
+test (); */
