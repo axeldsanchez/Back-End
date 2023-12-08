@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "Xiaomi",
+        "title": "Celular",
         "description": "S22",
         "code": 2200,
         "stock": 5,
@@ -16,5 +16,14 @@
         "stock": 8,
         "thumnail": "./S23.jpg",
         "price": 180000
+    },
+    {
+        "id": 3,
+        "title": "Celular",
+        "description": "S24",
+        "code": 2400,
+        "stock": 10,
+        "thumnail": "./S24.jpg",
+        "price": 200000
     }
-]
+ ]

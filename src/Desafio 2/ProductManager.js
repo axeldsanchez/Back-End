@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from "fs";
 
 class ProductManager {
     constructor(path) {
@@ -73,11 +73,13 @@ class ProductManager {
 
         await fs.promises.writeFile(this.path, JSON.stringify(updateProducts), 'utf-8')
     }
-}
+};
+
+export default ProductManager
 
 const test = async () => {
     const productManager = new ProductManager('./products.json');
-/*     await productManager.addProduct({
+    await productManager.addProduct({
         title: "Celular",
         description: "S22",
         code: 2200,
@@ -105,19 +107,18 @@ const test = async () => {
         thumnail: "./S24.jpg",
         price: 200000,
 
-    }); */
+    });
 
-    const product2 = await productManager.getProductsById(2);
+/*     const product2 = await productManager.getProductsById(2);
     console.log(product2);
 
     await productManager.updateProduct(1, {
         title: "Xiaomi"
     });
 
-    await productManager.deleteProduct(3);
+    await productManager.deleteProduct(3); */
 
 }
 
 
 test ();
-
