@@ -20,6 +20,9 @@ app.get("/products", async (req, res) => {
 app.get("/products/:id", async (req, res) => {
     const {id} = req.params;
     const products = await productManager.getProductsById(parseInt(id));
+    if (!products) {
+        return res.send({ error: 'El producto con el ID indicado no existe' })
+    }
     res.send(products);
 });
 
